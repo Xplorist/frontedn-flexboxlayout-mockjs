@@ -1,0 +1,29 @@
+#app {
+	display: flex;
+	flex-direction: column;
+	width: 99vw;
+	height: 98vh;
+}
+
+#query_content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#query_content .query_content_box {
+	flex-basis: 33.33%;
+}
+
+.query_content_box {
+	display: flex;
+}
+
+.query_content_box_input {
+	flex-grow: 1;
+}
+
+#query_condition_button {
+	display: flex;
+	justify-content: center;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>qm_edit</title>
+		<!-- css library -->
+		<!--
+		<link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+		-->
+		<link rel="stylesheet" href="./lib/page/pages.css">
+		<link rel="stylesheet" href="./lib/xbr/xbr-table/xbr-table.css">
+		<link rel="stylesheet" href="./lib/xbr/xbr-modal/xbr-modal.css">
+		<!-- custom css -->
+		<link rel="stylesheet" href="./css/qm_edit.css">
+	</head>
+	<body>
+		<div id="app">
+			<div id="title_bar">
+				<button @click="goback()">返回</button>
+				<span class="title-h1">{{ title }}</span>
+				<span>.</span>
+			</div>
+			<!--  -->
+			<!-- 文件上传 -->
+			<div id="div-file-upload" class="left-right-bar-container">
+				<div class="left-bar">
+					文件上传
+				</div>
+				<div id="div-input-file" class="right-bar">
+					<input type="file" />
+				</div>
+			</div>
+			<!-- 厂区 -->
+			<div id="div-factory" class="left-right-bar-container">
+				<div class="left-bar">
+					厂区
+				</div>
+				<div class="right-bar">
+					<input />
+				</div>
+			</div>
+			<!-- 专案 -->
+			<div id="div-project" class="left-right-bar-container">
+				<div class="left-bar">
+					专案
+				</div>
+				<div class="right-bar">
+					<input />
+				</div>
+			</div>
+			<!-- 版本 -->
+			<div id="div-version" class="left-right-bar-container">
+				<div class="left-bar">
+					版本
+				</div>
+				<div class="right-bar">
+					<input />
+				</div>
+			</div>
+			<!-- 审核路径 -->
+			<div id="div-audit-path">
+				<div>
+					<span class="title-h1">审核路径</span>
+				</div>
+				<div id="audit-path">
+					<div class="path-row">
+						<div class="path-col" @click="openMyModal()">DOC发行</div>
+						<div class="path-col" @click="openMyModal()"></div>
+						<div class="path-col" @click="openMyModal()">部级主管</div>
+						<div class="path-col" @click="openMyModal()"></div>
+						<div class="path-col" @click="openMyModal()">产工工程师</div>
+						<div class="path-col" @click="openMyModal()"></div>
+					</div>
+					<div class="path-row">
+						<div class="path-col" @click="openMyModal()">SQE/制造工程师</div>
+						<div class="path-col" @click="openMyModal()"></div>
+						<div class="path-col" @click="openMyModal()">课级主管</div>
+						<div class="path-col" @click="openMyModal()"></div>
+						<div class="path-col" @click="openMyModal()">承办</div>
+						<div class="path-col" @click="openMyModal()"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 操作栏 -->
+			<div id="div-button-bar">
+				<button>保存</button>
+				<button>提交</button>
+				<button @click="goback()">返回</button>
+			</div>
+
+			<!-- 打开弹窗按钮 -->
+			<button id="myModalBtn">打开弹窗</button>
+			<!-- 弹窗 -->
+			<div id="myModal" class="modal">
+				<!-- 弹窗内容 -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<span class="close">×</span>
+						<h2>弹窗头部</h2>
+					</div>
+					<div class="modal-body">
+						<p>弹窗内容...</p>
+						<p>弹窗内容...</p>
+					</div>
+					<div class="modal-footer">
+						<h3>弹窗底部</h3>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<!-- JS library -->
+	<script type="text/javascript" src="./lib/jquery-1.12.4/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="./lib/axios-0.19.1-dist/axios.min.js"></script>
+	<script type="text/javascript" src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./lib/vue-2.6.11/vue.min.js"></script>
+	<script type="text/javascript" src="./lib/mockjs/mock.js"></script>
+	<script type="text/javascript" src="./lib/page/pages.js"></script>
+	<!-- custom JS -->
+	<script type="text/javascript" src="./js/qm_edit.js"></script>
+	<!-- <script type="text/javascript" src="./js/qm_edit_$mock.js"></script> -->
+</html>
